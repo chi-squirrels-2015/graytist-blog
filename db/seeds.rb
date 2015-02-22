@@ -6,5 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 20.times do
-  Post.create(title: Faker::Lorem.sentence, body: Faker::Lorem.paragraph)
+  date = Faker::Date.backward(45)
+  Post.create(title: Faker::Lorem.sentence,
+              body: Faker::Lorem.paragraph,
+              created_at: date,
+              updated_at: date)
 end
