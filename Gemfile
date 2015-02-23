@@ -45,4 +45,6 @@ group :development, :test do
   gem 'faker'
 end
 
+gem 'puma'
+
 ruby "2.0.0"
