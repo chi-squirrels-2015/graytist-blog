@@ -2,8 +2,8 @@
   <% @posts.each do |post| %>
     <div class="post">
       <%= link_to post.title, post_path(post), class: "title" %>
-      <span class="time">posted on <%= post.created_at.strftime("%A %b %e, %Y at %l:%M %P") %></span>
-      <p><%= post.body.first(500) %>...</p>
+      <span class="time-small">posted on <%= post.created_at.strftime("%A %b %e, %Y at %l:%M %P") %></span>
+      <p><%= post.body.first(300) %></p>
       <%= link_to "Read more", post_path(post), class: "read-more" %>
     </div>
   <% end %>
