@@ -1,5 +1,5 @@
 .post {
-  margin: 80px auto;
+  margin: 40px auto 80px;
   width: 75%;
   padding: 40px 0;
   border-bottom: 1px solid #EBE6E6;
@@ -9,34 +9,31 @@
 .post a.title {
   font-weight: 300;
   display: block;
-  font-size: 28px;
+  font-size: 32px;
   color: #000000;
 }
 
 .post h1 {
-  margin-bottom: 6px;
+  margin: 0 0 6px;
 }
 
 .post a.title:hover {
   text-decoration: none;
 }
 
-.post .time-small, .post .time-large {
+.post .time {
   color: #aaaaaa;
   font-weight: 300;
 }
 
-.post .time-small {
-  font-size: 14px;
-}
-
-.post .time-large {
-  font-size: 18px;
+.post .time {
+  font-size: 16px;
 }
 
 .post p {
-  padding: 20px 0;
-  font-size: 18px;
+  padding: 15px 0;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .post a.read-more {

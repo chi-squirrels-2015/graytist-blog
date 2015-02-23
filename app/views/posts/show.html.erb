@@ -1,5 +1,7 @@
 <div class="post">
   <h1><%= @post.title %></h1>
-  <span class="time-large">posted on <%= @post.created_at.strftime("%A %b %e, %Y at %l:%M %P") %></span>
-  <p><%= @post.body %></p>
+  <span class="time">posted on <%= @post.created_at.strftime("%A %b %e, %Y at %l:%M %P") %></span>
+  <% @post.body.split("\n").each do |paragraph| %>
+    <p><%= paragraph %></p>
+  <% end %>
 </div>
