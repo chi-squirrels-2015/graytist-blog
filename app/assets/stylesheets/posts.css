@@ -40,3 +40,43 @@
   float: right;
   padding: 20px 100px 20px;
 }
+
+ul.errors {
+  list-style: none;
+  display: block;
+}
+
+li.error {
+  padding: 20px;
+  background-color: #de5842;
+  width: 75%;
+  border: 1px solid #c61f04;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.form-group input[type="text"], .form-group textarea {
+  margin-left: 20px;
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #c61f04;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.form-group input[type="submit"] {
+  float: right;
+  margin-right: 20px;
+}
+
+.form-group label {
+  float: left;
+  font-size: 24px;
+}
+
+.form-group {
+  padding: 20px;
+  width: 60%;
+}

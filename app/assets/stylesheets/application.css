@@ -18,7 +18,7 @@
 body {
   font-family: "Roboto Condensed";
   margin: 0;
-  padding: 0;
+  padding: 0 0 100px;
 }
 
 .container {
@@ -36,10 +36,11 @@ nav a.brand {
   float: left;
   font-size: 30px;
   font-weight: 400;
+  color: #c61f04;
 }
 
 nav a.brand:hover {
-  color: #c61f04;
+  color: #de5842;
 }
 
 nav ul {

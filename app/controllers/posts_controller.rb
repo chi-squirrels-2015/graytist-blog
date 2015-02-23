@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
   end
 
   def new
@@ -8,13 +8,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(params[:post])
+    @post = Post.new(post_params)
 
     if @post.save
       redirect_to post_path(@post)
     else
-      flash[:errors] = @post.errors
-      redirect_to new_post_path(@post)
+      render :new
     end
   end
 
@@ -32,13 +31,23 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to post_path(@post)
     else
-      flash[:errors] = @post.errors
-      redirect_to edit_post_path(@post)
+      render :edit
     end
   end
 
   def destroy
     post = Post.find(params[:id])
     redirect_to posts_path
+  end
+
+  def most_recent
+    @post = Post.most_recent
+    render :show
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :body)
   end
 end

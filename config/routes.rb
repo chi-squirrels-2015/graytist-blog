@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root 'posts#index'
+  get "/posts/most_recent" => 'posts#most_recent', as: "most_recent"
   resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.
