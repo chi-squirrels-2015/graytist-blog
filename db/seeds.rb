@@ -6,10 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 20.times do
-  date = Faker::Time.backward(days: 45, period: :day)
+  date = Faker::Time.backward(45, :day)
   title = Faker::Lorem.sentence
   body = ""
-  10.times { body << Faker::Lorem.paragraph }
+  rand(8..12).times do
+    body << Faker::Lorem.sentences(12).join(" ") + "\n"
+  end
 
   Post.create(title: title,
               body: body,
