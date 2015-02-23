@@ -45,4 +45,4 @@ group :development, :test do
   gem 'faker'
 end
 
-ruby "2.0.0p481"
+ruby "2.0.0"
